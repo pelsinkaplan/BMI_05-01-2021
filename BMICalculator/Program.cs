@@ -6,8 +6,10 @@ namespace BMICalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--------------------------------\n-BMI Hesaplayıcıya Hoşgeldiniz!-\n" +
-                "--------------------------------\n\nLütfen gerekli bilgilerini giriniz.");
+            Console.WriteLine("----------------------------------\n" +
+                "- BMI Hesaplayıcıya Hoşgeldiniz! -\n" +
+                "----------------------------------\n" +
+                "\nLütfen gerekli bilgilerini giriniz.");
 
             try
             {
