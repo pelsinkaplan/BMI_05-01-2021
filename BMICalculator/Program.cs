@@ -6,33 +6,34 @@ namespace BMICalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("----------------------------------\n" +
-                "- BMI Hesaplayıcıya Hoşgeldiniz! -\n" +
-                "----------------------------------\n" +
+            Console.WriteLine("---------------------\n" +
+                "- BOY KİLO ENDEKSİ -\n" +
+                "---------------------\n" +
                 "\nLütfen gerekli bilgilerini giriniz.");
 
             try
             {
-                Console.Write("\nBoy : ");
-                double boy = Convert.ToDouble(Console.ReadLine());
-                Console.Write("\nKilo : ");
-                double kilo = Convert.ToDouble(Console.ReadLine());
+                Console.Write("\nKilonuz (kg) : ");
+                double weight = Convert.ToDouble(Console.ReadLine());
+                Console.Write("\nBoyunuz (cm) : ");
+                double heihgt = Convert.ToDouble(Console.ReadLine());
 
-                boy /= 100;
-                double bmi = kilo / Math.Pow(boy, 2);
+                heihgt /= 100;
+                double bmi = weight / Math.Pow(heihgt, 2);
+                string result = bmi.ToString("0.###");
 
-                Console.Write("\nSonucunuz : ");
+                Console.Write($"\nSonucunuz :\n-> BMI : {result}  ");
 
                 if (bmi < 18.5)
-                    Console.WriteLine("Zayıf");
+                    Console.WriteLine("(Zayıf)");
                 else if (bmi >= 18.5 && bmi < 25)
-                    Console.WriteLine("Normal");
+                    Console.WriteLine("(Normal)");
                 else if (bmi >= 25 && bmi < 30)
-                    Console.WriteLine("Kilolu");
+                    Console.WriteLine("(Kilolu)");
                 else if (bmi >= 30 && bmi < 35)
-                    Console.WriteLine("Obez");
+                    Console.WriteLine("(Obez)");
                 else if (bmi >= 35)
-                    Console.WriteLine("Aşırı Obez");
+                    Console.WriteLine("(Aşırı Obez)");
 
                 Console.ReadLine();
             }
